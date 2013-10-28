@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Skyscanner crawler by drZuo</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/drZuo/skyscanner_crawler">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/drZuo/skyscanner_crawler/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/drZuo/skyscanner_crawler/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Skyscanner crawler</h1>
+          <p>skyscanner, crawler, flights</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/drZuo">drZuo</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h3>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h3>
+
+<p>This program crawls <a href="http://www.skyscanner.net">http://www.skyscanner.net</a> and lists possible combined flights destinations in given month. This might be helpful (a first step) when you plan your holidays.</p>
+
+<h3>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a>Download</h3>
+
+<p>There are no binaries. Python sources are available at <a href="https://github.com/drZuo/skyscanner_crawler">the project page</a>.</p>
+
+<h3>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h3>
+
+<ul>
+<li>Selenium (2.35)</li>
+<li>Python (2.6)</li>
+</ul><p>Python libs:</p>
+
+<ul>
+<li>argparse</li>
+<li>networkx</li>
+<li>selenium</li>
+</ul><h3>
+<a name="exemplary-execution" class="anchor" href="#exemplary-execution"><span class="octicon octicon-link"></span></a>Exemplary execution</h3>
+
+<pre><code>$  python SkyCrawler.py --price-limit 100 --currency pln --departure-point pl --language en
+
+Running configuration:
+        currency = pln
+        departure_month = november
+        departure_point = pl
+        departure_year = 2013
+        flights_limit = 2
+        ignored_points = None
+        language = en
+        map_dot_filename = map.dot
+        map_save_to_dot = False
+        output_encoding = utf-8
+        price_limit = 100
+        selenium_host = localhost
+        selenium_load_timeout = 7.5
+        selenium_port = 4444
+        selenium_start_cmd = *chrome
+        user_place = PL
+Initializing crawler...
+Initializing selenium...
+Points to check: 1
+Loading page for PL... waiting for Javascript execution... processing 176 flights...
+Points to check: 14
+Loading page for BE... waiting for Javascript execution... processing 182 flights...
+Points to check: 18
+Loading page for FR... waiting for Javascript execution... processing 195 flights...
+Points to check: 17
+Loading page for NL... waiting for Javascript execution... processing 192 flights...
+Points to check: 16
+Loading page for GR... waiting for Javascript execution... processing 174 flights...
+Points to check: 15
+Loading page for PT... waiting for Javascript execution... processing 182 flights...
+Points to check: 14
+Loading page for NO... waiting for Javascript execution... processing 181 flights...
+Points to check: 17
+Loading page for EE... waiting for Javascript execution... processing 143 flights...
+Points to check: 16
+Loading page for IT... waiting for Javascript execution... processing 190 flights...
+Points to check: 16
+Loading page for CY... waiting for Javascript execution... processing 162 flights...
+Points to check: 15
+Loading page for IE... waiting for Javascript execution... processing 176 flights...
+Points to check: 14
+Loading page for ES... waiting for Javascript execution... processing 192 flights...
+Points to check: 14
+Loading page for LV... waiting for Javascript execution... processing 154 flights...
+Points to check: 13
+Loading page for LT... waiting for Javascript execution... processing 130 flights...
+Points to check: 12
+Loading page for RO... waiting for Javascript execution... processing 167 flights...
+Points to check: 11
+Loading page for DK... waiting for Javascript execution... processing 182 flights...
+Points to check: 10
+Loading page for HR... waiting for Javascript execution... processing 164 flights...
+Points to check: 9
+Loading page for DE... waiting for Javascript execution... processing 197 flights...
+Points to check: 8
+Loading page for HU... waiting for Javascript execution... processing 170 flights...
+Points to check: 7
+Loading page for FI... waiting for Javascript execution... processing 168 flights...
+Points to check: 6
+Loading page for MA... waiting for Javascript execution... processing 170 flights...
+Points to check: 5
+Loading page for GE... waiting for Javascript execution... processing 137 flights...
+Points to check: 4
+Loading page for SK... waiting for Javascript execution... processing 71 flights...
+Points to check: 3
+Loading page for MT... waiting for Javascript execution... processing 148 flights...
+Points to check: 2
+Loading page for UK... waiting for Javascript execution... processing 206 flights...
+Points to check: 2
+Loading page for SE... waiting for Javascript execution... processing 184 flights...
+Points to check: 3
+Loading page for CZ... waiting for Javascript execution... processing 180 flights...
+Points to check: 2
+Loading page for BA... waiting for Javascript execution... processing 105 flights...
+Points to check: 1
+Loading page for MK... waiting for Javascript execution... processing 111 flights...
+Flights from Poland:
+19 pln - Norway
+19 pln - Sweden
+33 pln - Spain
+33 pln - Belgium
+33 pln - Germany
+33 pln - United Kingdom
+38 pln - Poland         ( via Norway )
+40 pln - Finland
+42 pln - Italy
+42 pln - Netherlands
+48 pln - France         ( via Sweden )
+64 pln - Ireland
+69 pln - Portugal       ( via Spain )
+75 pln - Lithuania      ( via Norway )
+75 pln - Romania        ( via Germany )
+76 pln - Latvia         ( via Norway )
+78 pln - Estonia        ( via Norway )
+78 pln - Cyprus         ( via Norway )
+78 pln - Malta  ( via Italy )
+80 pln - Hungary        ( via Sweden )
+81 pln - Greece         ( via Norway )
+81 pln - Bosnia and Herzegovina         ( via Sweden )
+81 pln - Republic of Macedonia  ( via Sweden )
+90 pln - Morocco        ( via Belgium )
+96 pln - Denmark        ( via United Kingdom )
+96 pln - Croatia        ( via Belgium )
+96 pln - Slovakia       ( via Belgium )
+97 pln - Czech Republic         ( via United Kingdom )
+99 pln - Georgia
+Closing selenium...
+</code></pre>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
